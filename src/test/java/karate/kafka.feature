@@ -1,8 +1,7 @@
-Feature: example of using helper classes so that your karate tests
-    can focus only on the calls, requests and responses
-    look at karate-config.js for how "kafka" was initialized
+Feature: karate-kafka demo
 
 Scenario:
-* kafka.send('hello', { message: 'hello', info: { first: 5, second: true } })
-* def result = kafka.listen()
+* def session = kafka.listen('test-topic')
+* session.send('hello', { message: 'hello', info: { first: 5, second: true } })
+* def result = session.collect()
 * match result == [{ message: 'hello', info: { first: 5, second: true } }]
