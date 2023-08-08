@@ -1,7 +1,7 @@
 {
-  "namespace": "io.karatelabs.karate.serde",
+  "namespace": "io.karatelabs.examples",
   "type": "record",
-  "name": "complex",
+  "name": "Complex",
   "version": "0.2",
   "fields": [
     {
