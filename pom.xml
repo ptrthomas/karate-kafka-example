@@ -29,11 +29,11 @@
             <scope>test</scope>
         </dependency>         
         <dependency>
-            <groupId>io.karatelabs.karate</groupId>
+            <groupId>io.karatelabs</groupId>
             <artifactId>karate-kafka</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/lib/karate-kafka-1.0-SNAPSHOT.jar</systemPath>
+            <systemPath>${project.basedir}/lib/karate-kafka.jar</systemPath>
         </dependency>        		
     </dependencies>
 
