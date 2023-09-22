@@ -11,15 +11,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
         <maven.compiler.version>3.11.0</maven.compiler.version>
-        <maven.surefire.version>3.0.0</maven.surefire.version>        
-        <karate.version>1.4.1.RC3</karate.version>
+        <maven.surefire.version>3.0.0</maven.surefire.version>
     </properties>    
 
     <dependencies>         
         <dependency>
-            <groupId>com.intuit.karate</groupId>
-            <artifactId>karate-junit5</artifactId>
-            <version>${karate.version}</version>
+            <groupId>io.karatelabs</groupId>
+            <artifactId>karate-kafka</artifactId>
+            <version>0.1.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -29,12 +28,11 @@
             <scope>test</scope>
         </dependency>         
         <dependency>
-            <groupId>io.karatelabs</groupId>
-            <artifactId>karate-kafka</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/karate-kafka.jar</systemPath>
-        </dependency>        		
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.6.2</version>
+            <scope>test</scope>
+        </dependency>       		
     </dependencies>
 
     <build>
