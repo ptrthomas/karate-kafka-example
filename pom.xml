@@ -20,13 +20,7 @@
             <artifactId>karate-kafka</artifactId>
             <version>0.1.0</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.confluent</groupId>
-            <artifactId>kafka-streams-avro-serde</artifactId>
-            <version>7.4.1</version>
-            <scope>test</scope>
-        </dependency>         
+        </dependency>        
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
