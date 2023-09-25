@@ -12,27 +12,29 @@ Background:
 * register { name: 'hello', path: 'classpath:karate/hello.avsc' }
 
 Scenario:
-* def session = karate.consume('kafka', 'test-topic')
+* def session = karate.consume('kafka')
+* session.topic = 'test-topic'
 * session.count = 2
 * session.filter = x => x.key != 'zero'
+* session.start()
 
 * topic 'test-topic'
 * schema 'hello'
 * key 'zero'
-* request { message: 'hello0', info: { first: 0, second: false } }
+* value { message: 'hello0', info: { first: 0, second: false } }
 * produce kafka
 
 * topic 'test-topic'
 * schema 'hello'
 * headers { foo: 'bar1', baz: 'ban1' }
 * key 'first'
-* request { message: 'hello1', info: { first: 1, second: true } }
+* value { message: 'hello1', info: { first: 1, second: true } }
 * produce kafka
 
 * topic 'test-topic'
 * schema 'hello'
 * key 'second'
-* request { message: 'hello2', info: { first: 2, second: false } }
+* value { message: 'hello2', info: { first: 2, second: false } }
 * produce kafka
 
 * def response = session.collect()

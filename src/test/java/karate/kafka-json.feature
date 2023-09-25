@@ -9,12 +9,14 @@ Background:
 """
 
 Scenario:
-* def session = karate.consume('kafka', 'test-topic')
+* def session = karate.consume('kafka')
+* session.topic = 'test-topic'
 * session.count = 1
+* session.start()
 
 * topic 'test-topic'
 * key 'first'
-* request { message: 'hello', info: { first: 1, second: true } }
+* value { message: 'hello', info: { first: 1, second: true } }
 * produce kafka
 
 * def response = session.collect()
